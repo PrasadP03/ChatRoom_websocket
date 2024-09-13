@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Chatroom Login</title>
+	<style>
+		body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa, #e0f7fa); /* Light pastel background */
+            color: #333;
+        }
+
+        div {
+            text-align: center;
+            padding: 2em;
+            background-color: rgba(255, 255, 255, 0.9); /* Soft white background */
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            width: 320px;
+        }
+
+        h1 {
+            margin-bottom: 0.5em;
+            font-size: 2em;
+            color: #6a89cc; /* Muted blue */
+        }
+
+        h4 {
+            margin-bottom: 1.5em;
+            font-size: 1.2em;
+            color: #95afc0; /* Soft grey-blue */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[name="username"] {
+            padding: 0.7em;
+            width: 100%;
+            border: 2px solid #dff9fb; /* Light pastel blue border */
+            border-radius: 20px;
+            margin-bottom: 1em;
+            font-size: 1em;
+            background-color: #f7f1e3; /* Soft warm beige */
+            color: #2c3e50;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            transition: border 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[name="username"]:focus {
+            outline: none;
+            border-color: #82ccdd; /* Highlighted blue border on focus */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+        }
+
+        input[type="submit"] {
+            padding: 0.7em 2em;
+            background-color: #6a89cc; /* Muted blue */
+            border: none;
+            border-radius: 20px;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4a69bd; /* Darker blue on hover */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            div {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h4 {
+                font-size: 1em;
+            }
+
+            input[name="username"], input[type="submit"] {
+                font-size: 0.9em;
+            }
+        }
+	</style>
+</head>
+<body>
+<div>
+	<h1>Welcome to Chatroom</h1>
+	<h4>Enter Your Username</h4>
+	<form action="/chatroom/usernamecheck" method="get">
+		<input name="username" type="text" placeholder="Username" required>
+		<input type="submit" value="Join">
+	</form>
+</div>
+</body>
+</html>
