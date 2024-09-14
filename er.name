@@ -1,0 +1,13 @@
+user.name=Prasad Pawar
+user.email=pawarprasad2029@gmail.com
+credential.helper=wincred
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+remote.github.url=https://github.com/PrasadP03/ChatRoom_websocket.git
+remote.github.fetch=+refs/heads/*:refs/remotes/github/*
+remote.origin.url=https://github.com/PrasadP03/Chat-app.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
