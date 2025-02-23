@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  chatroom-app:
+    image: chatroom-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    restart: unless-stopped
+    environment:
+      - SPRING_APPLICATION_NAME=ChatRoomWithoutDatabase
+      - SERVER_PORT=8081
